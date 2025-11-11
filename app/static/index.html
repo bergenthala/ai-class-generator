@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Class Generator - Interactive Story</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 AI Class Generator</h1>
+            <div class="player-info">
+                <span id="player-name">Adventurer</span>
+                <span id="player-class" class="class-badge">No Class</span>
+            </div>
+        </div>
+
+        <div class="chat-wrapper">
+            <div class="chat-container" id="chat-container">
+                <div class="message system">
+                    <div class="message-content">
+                        <strong>System:</strong> Welcome, brave adventurer! Your journey begins now. Choose your path...
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container" id="input-container">
+            <div class="class-selection" id="class-selection">
+                <h2>Choose Your Starting Class</h2>
+                <div class="class-options">
+                    <button class="class-btn warrior" data-class="warrior">
+                        <span class="class-icon">⚔️</span>
+                        <span class="class-name">Warrior</span>
+                        <span class="class-desc">Master of combat and strength</span>
+                    </button>
+                    <button class="class-btn priest" data-class="priest">
+                        <span class="class-icon">✨</span>
+                        <span class="class-name">Priest</span>
+                        <span class="class-desc">Healer and protector of the light</span>
+                    </button>
+                    <button class="class-btn mage" data-class="mage">
+                        <span class="class-icon">🔮</span>
+                        <span class="class-name">Mage</span>
+                        <span class="class-desc">Wielder of arcane magic</span>
+                    </button>
+                    <button class="class-btn thief" data-class="thief">
+                        <span class="class-icon">🗡️</span>
+                        <span class="class-name">Thief</span>
+                        <span class="class-desc">Shadow and stealth expert</span>
+                    </button>
+                    <button class="class-btn wanderer" data-class="wanderer">
+                        <span class="class-icon">🌙</span>
+                        <span class="class-name">Wanderer</span>
+                        <span class="class-desc">Free from class restrictions</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="action-buttons" id="action-buttons" style="display: none;">
+                <button class="action-btn" data-action="read_book">📚 Read a Book</button>
+                <button class="action-btn" data-action="kill_monster">⚔️ Fight Monster</button>
+                <button class="action-btn" data-action="craft_item">🔨 Craft Item</button>
+                <button class="action-btn" data-action="explore">🗺️ Explore</button>
+                <button class="action-btn" data-action="meditate">🧘 Meditate</button>
+            </div>
+
+            <div class="text-input" id="text-input" style="display: none;">
+                <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+
+        <div class="stats-panel" id="stats-panel">
+            <h3>Your Progress</h3>
+            <div class="stats-content">
+                <div class="stat-item">
+                    <span class="stat-label">Books Read:</span>
+                    <span class="stat-value" id="stat-books">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Monsters Killed:</span>
+                    <span class="stat-value" id="stat-monsters">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Items Crafted:</span>
+                    <span class="stat-value" id="stat-crafted">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Classes Unlocked:</span>
+                    <span class="stat-value" id="stat-classes">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="classes-panel" id="classes-panel">
+            <h3>Unlocked Classes</h3>
+            <div class="classes-content" id="classes-content">
+                <p class="no-classes">No classes unlocked yet. Perform actions to unlock new classes!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+

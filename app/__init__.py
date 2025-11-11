@@ -1,0 +1,2 @@
+"""AI Class Generator Application"""
+
